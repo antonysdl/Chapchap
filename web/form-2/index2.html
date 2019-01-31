@@ -1,0 +1,455 @@
+<!doctype html>
+<html><head>
+<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+         <title>Instant Airtime</title>
+        <!-- CSS -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="assets/css/form-elements.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+
+ <link rel="shortcut icon" href="assets/ico/favicon2.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+        <style type="text/css">
+        body,td,th {
+	font-family: Roboto, sans-serif;
+}
+        body {
+	background-image:url(backi.jpg);
+}
+        </style>
+         <style>
+  
+    }
+
+    body {
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: column;
+      flex-direction: column;
+      height: calc(100% - 100px);
+      margin: 50px 0;
+      background-color: #ccc;
+    }
+
+    *, :after, :before {
+      box-sizing: border-box;
+    }
+
+    main {
+      display: -webkit-flex;
+      display: flex;
+      -webkit-align-items: center;
+      align-items: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      height: 100%;
+    }
+
+    main section {
+      min-width: 250px;
+      max-width: 50%;
+      height: 100%;
+      text-align: center;
+    }
+
+  main img.qrious {
+      box-shadow: 0 0 10px 5px #666;
+    }
+
+    main form {
+      padding: 25px 0 50px 0;
+      text-align: left;
+    }
+
+    main form label {
+      display: block;
+      margin-top: 10px;
+      color: #444;
+      font-weight: bold;
+    }
+
+    main form input,
+    main form select {
+      width: 100%;
+    }
+
+    main form input:invalid {
+      outline: 2px solid #f00;
+      color: #f00;
+    }
+  </style>
+  <script src="assets/js/jquery-1.11.1.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.backstretch.min.js"></script>
+<script src="assets/js/scripts.js"></script>
+<!--<script src="assets/js/placeholder.js"></script> --> 
+<script type="text/javascript" src="assets/js/qrious.js"> </script>
+
+<script>
+  
+  (function() {
+    var $background = document.querySelector('main form [name="background"]');
+    var $backgroundAlpha = document.querySelector('main form [name="backgroundAlpha"]');
+    var $foreground = document.querySelector('main form [name="foreground"]');
+    var $foregroundAlpha = document.querySelector('main form [name="foregroundAlpha"]');
+    var $level = document.querySelector('main form [name="level"]');
+    var $section = document.querySelector('main section');
+    var $padding = document.querySelector('main form [name="padding"]');
+    var $size = document.querySelector('main form [name="size"]');
+    var $value = document.querySelector('main form [name="value"]');
+
+    var qr = window.qr = new QRious({
+      element: document.getElementById('qrious'),
+      size: 250,
+      value: '21233'
+    });
+
+    $background.addEventListener('change', function() {
+      qr.background = $background.value || null;
+    });
+
+    $backgroundAlpha.addEventListener('change', function() {
+      qr.backgroundAlpha = $backgroundAlpha.value || null;
+    });
+
+    $foreground.addEventListener('change', function() {
+      qr.foreground = $foreground.value || null;
+    });
+
+    $foregroundAlpha.addEventListener('change', function() {
+      qr.foregroundAlpha = $foregroundAlpha.value || null;
+    });
+
+    $level.addEventListener('change', function() {
+      qr.level = $level.value;
+    });
+
+    $padding.addEventListener('change', function() {
+      if ($padding.validity.valid) {
+        qr.padding = $padding.value !== '' ? $padding.value : null;
+      }
+    });
+
+    $size.addEventListener('change', function() {
+      if (!$size.validity.valid) {
+        return;
+      }
+
+      qr.size = $size.value || null;
+
+      $section.style.minWidth = qr.size + 'px';
+    });
+
+    $value.value = 'QRious';
+    $value.addEventListener('input', function() {
+      qr.value = $value.value;
+    });
+  })();
+
+</script>   
+</head>
+
+ <body >
+    <div class="fa-backward"> <a class="fa-home" href="file:///C|/xampp/htdocs/airtimeappfun-web/web/login.html"dex.html"></a></div>
+
+        <!-- Content -->
+        <div class="top-content">
+        	
+            <div class="inner-bg">
+                <div class="container">
+                	
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2 text">
+                        	<a class="logo" href="index.html"></a>
+                            <h1><img src="assets/img/backgrounds/airtimelogo2.png"/> </h1>
+                            <div class="description">
+                            	<p>Easy.. Fast.. Instant Topup.. Sms your number to 202020 and get your FREE QR code.                         
+                            	</p>
+                                <div class="container">
+  <button class="btn btn-default btn-lg btn-link" style="font-size:36px;">
+    <span class="glyphicon glyphicon-comment"></span>
+  </button>
+  <span class="badge badge-notify">3</span>
+</div>
+<button type="button" class="btn btn-primary">DOWNLOADS <span class="badge">7</span></button>
+                            </div>
+                            
+                            <div class="top-big-link">
+                                <a class="text-info alert-link launch-modal" href="#" data-modal-id="modal-login3"><h3><strong>FREE QR CODE DOWNLOAD</strong></h3></a><br>
+                            	<a class="btn btn-link-1 launch-modal" href="#" data-modal-id="modal-login">LOGIN</a>
+                                <a class="btn btn-link-1 launch-modal" href="#" data-modal-id="modal-login2">SIGN UP</a><br><br>
+                                <a class="btn btn-link-1 launch-modal"  href="#" data-modal-id="modal-login4">FORGOT PASSWORD</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2 social-login">
+                        	<h3>...or login with:</h3>
+                        	<div class="social-login-buttons">
+	                        	<a class="btn btn-link-2" href="#">
+	                        		<i class="fa fa-facebook"></i> Facebook
+	                        	</a>
+	                        	<a class="btn btn-link-2" href="#">
+	                        		<i class="fa fa-twitter"></i> Twitter
+	                        	</a>
+	                        	<a class="btn btn-link-2" href="#">
+	                        		<i class="fa fa-google-plus"></i> Google Plus
+	                        	</a>
+                        	</div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- MODAL FORGOT PASSWORD -->
+        <div class="modal fade" id="modal-login4" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true">
+        	<div class="modal-dialog">
+        		<div class="modal-content">
+        			
+        			<div class="modal-header">
+        				<button type="button" class="close" data-dismiss="modal">
+        					<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+        				</button>
+        				<h3 class="modal-title" id="modal-login-label">PASSWORD RECOVERY</h3>
+        				<p>Enter the SMS code to reset:</p>
+        			</div>
+        			
+        			<div class="modal-body">
+        				
+	                    <form role="form" action="" method="post" class="login-form">
+	                    	<div class="form-group">
+	                    		<label class="sr-only" for="form-username">SMS CODE</label>
+	                        	<input type="text" name="form-username" placeholder="Enter SMS code..." class="form-username form-control" id="form-username">
+	                        </div>
+	                        <div class="progress">
+  <div class="progress-bar progress-bar-striped active" role="progressbar"
+  aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">
+    40%
+  </div>
+</div>
+	                        <button type="submit" class="btn">REQUST SMS CODE</button><br>
+                            <div class="form-group">
+	                        	<label class="sr-only" for="form-password">New Password</label>
+	                        	<input type="password" name="form-password" placeholder="New Password..." class="form-password form-control" id="form-password">
+	                        </div>
+	                        <div class="form-group">
+	                        	<label class="sr-only" for="form-password">New Password</label>
+	                        	<input type="password" name="form-password" placeholder="Confirm New Password..." class="form-password form-control" id="form-password">
+	                        </div>
+	                        <button type="submit" class="btn">LOGIN</button>
+                    
+	                    </form>
+	                    
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        
+        <!-- MODAL LOGIN -->
+        <div class="modal fade" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true">
+        	<div class="modal-dialog">
+        		<div class="modal-content">
+        			
+        			<div class="modal-header">
+        				<button type="button" class="close" data-dismiss="modal">
+        					<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+        				</button>
+        				<h3 class="modal-title" id="modal-login-label">Login to our site</h3>
+        				<p>Enter your username and password to log on:</p>
+        			</div>
+        			
+        			<div class="modal-body">
+        				
+	                    <form role="form" action="" method="post" class="login-form">
+	                    	<div class="form-group">
+	                    		<label class="sr-only" for="form-username">Username</label>
+	                        	<input type="text" name="form-username" placeholder="Username..." class="form-username form-control" id="form-username">
+	                        </div>
+	                        <div class="form-group">
+	                        	<label class="sr-only" for="form-password">Password</label>
+	                        	<input type="password" name="form-password" placeholder="Password..." class="form-password form-control" id="form-password">
+	                        </div>
+	                        <button type="submit" class="btn">Sign in!</button><div class="row"><br>
+                        <div class="col-sm-8 col-sm-offset-2 social-login">
+                        	<h4 class="text-centre">...or login with:</h4>
+                        	<div class="social-login-buttons">
+	                        	<a class="text-info" href="modal-login2">
+	                        		<i class="fa fa-facebook"></i> Facebook
+	                        	</a>
+	                        	<a class="text-info" href="#">
+	                        		<i class="fa fa-twitter"></i> Twitter
+	                        	</a>
+	                        	<a class="text-info" href="#">
+	                        		<i class="fa fa-google-plus"></i> Google Plus
+	                        	</a>
+                        	</div>
+                        </div>
+                    </div>
+                    
+	                    </form>
+	                    
+        			</div>
+        		</div>
+        	</div>
+        </div>
+          <!-- MODAL SIGN UP -->
+        <div class="modal fade" id="modal-login2" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true">
+        	<div class="modal-dialog">
+        		<div class="modal-content">
+        			
+        			<div class="modal-header">
+        				<button type="button" class="close" data-dismiss="modal">
+        					<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+        				</button>
+        				<h3 class="modal-title" id="modal-login-label">Sign Up to Form</h3>
+        				<p>Instant Airtime Sign Up:</p>
+        			</div>
+        			
+        			<div class="modal-body">
+        				
+	                    <form role="form" action="" method="post" class="login-form">
+	                    	<div class="form-group">
+	                    		<label class="sr-only" for="form-username">Full Names</label>
+	                        	<input type="text" name="form-username" placeholder="Full Names..." class="form-username form-control" id="form-username">
+	                        </div>
+	                        <div class="form-group">
+	                        	<label class="sr-only" for="form-password">Mobile Number</label>
+	                        	<input type="text" name="form-password" placeholder="Mobile Number..." class="form-password form-control" id="form-password">
+	                        </div>
+                            <div class="form-group">
+	                    		<label class="sr-only" for="form-username">National ID</label>
+	                        	<input type="text" name="form-username2" placeholder="National ID..." class="form-username form-control" id="form2-username">
+	                        </div>
+	                        <div class="form-group">
+	                        	<label class="sr-only" for="form-password">Email</label>
+	                        	<input type="text" name="form-password" placeholder="Email..." class="form-password form-control" id="form-password">
+	                        </div>
+                            <div class="form-group">
+	                    		<label class="sr-only" for="form-username">User Name</label>
+	                        	<input type="text" name="form-username2" placeholder="User Name..." class="form-username form-control" id="form2-username">
+	                        </div>
+                            <div class="form-group">
+	                        	<label class="sr-only" for="form-password">Password</label>
+	                        	<input type="password" name="form-password" placeholder="Password..." class="form-password form-control" id="form-password">
+	                        </div>
+                            <div class="form-group">
+	                        	<label class="sr-only" for="form-password">Confirm password</label>
+	                        	<input type="password" name="form-password" placeholder="Confirm password..." class="form-password form-control" id="form-password">
+	                        </div>
+	                        <button type="submit" class="btn">Sign in!</button>
+	                    
+	                        
+	                    </form>
+	                    <div class="row">
+                        <div class="navbar-text">
+                        	<h3>...or Sign Up with:</h3>
+                        	<div class="social-login-buttons">
+	                        	<a class="text-info" href="modal-login3">
+	                        		<i class="fa fa-facebook"></i> Facebook
+	                        	</a>
+	                        	<a class="text-info" href="#">
+	                        		<i class="fa fa-twitter"></i> Twitter
+	                        	</a>
+	                        	<a class="text-info" href="#">
+	                        		<i class="fa fa-google-plus"></i> Google Plus
+	                        	</a>
+                        	</div>
+                        </div>
+                    </div>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+  <!--QR MODAL -->
+        <div class="modal fade" id="modal-login3" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true">
+        	<div class="modal-dialog">
+        		<div class="modal-content">
+        			
+        			<div class="modal-header">
+        				<button type="button" class="close" data-dismiss="modal">
+        					<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+        				</button>
+        				<h3 class="modal-title" id="modal-login-label">FREE QR CODE GENERATOR</h3>
+        				<p>Enter your MOBILE NUMBER and download...</p>
+        			</div>
+        			
+        			<div class="modal-body" id="qr1">
+        				
+	                  <form role="form" action="" method="post" class="login-form"> 
+	                    	
+                   
+   <main>
+  <section>
+    <img id="qrious" height="250" width="250" src="data:image/png;base64,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"/>
+
+    <form autocomplete="off">
+      <label>
+       Enter Mobile Number
+        <input type="text" name="value" value="QRious" spellcheck="false">
+      </label>
+
+      <label class="text-success">
+        size
+        <input type="number" name="size" placeholder="100" min="100" max="1000" value="250">
+      </label>
+
+      <label>
+        padding
+        <input type="number" name="padding" placeholder="Auto" min="0">
+      </label>
+
+      <label>
+        level
+        <select name="level">
+          <option value="L">L - 7% damage</option>
+          <option value="M">M - 15% damage</option>
+          <option value="Q">Q - 25% damage</option>
+          <option value="H">H - 30% damage</option>
+        </select>
+      </label>
+
+      <label>
+        background color
+        <input type="color" name="background" value="#ffffff">
+      </label>
+
+      <label>
+        background alpha
+        <input type="number" name="backgroundAlpha" placeholder="1" min="0" max="1" step="0.1" value="1">
+      </label>
+
+      <label>
+        foreground color
+        <input type="color" name="foreground" value="#000000">
+      </label>
+
+      <label>
+        foreground alpha
+        <input type="number" name="foregroundAlpha" placeholder="1" min="0" max="1" step="0.1" value="1">
+      </label>
+      <button type="submit" class="btn">Sign in!</button>
+    </form>
+  </section>
+</main>
+    </form> </form> 
+	                    
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        
+ </body>
+
+</html>
